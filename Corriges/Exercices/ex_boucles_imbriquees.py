@@ -6,6 +6,7 @@
 # « Voulez-vous rejouer ? » Réponse possible oui ou non
 
 def main():
+    # Sans utiliser le walrus ":="
     reponse = ""
 
     while reponse.upper().strip() != "NON":

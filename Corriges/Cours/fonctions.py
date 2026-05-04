@@ -25,17 +25,22 @@ def cube(x):
 
 # Fonction avec une valeur par défaut dans ses arguments
 # (arguments nommés permet aussi d'envoyer dans le désordre)
-def puissance(num, x=1):
+def puissance(num, p=1):
     resultat = num
-    for _ in range(1, x):
+
+    for _ in range(1, p):
         resultat *= num
+
     return resultat
 
 # Fonction avec un nombre variable d'arguments
 def argsMultiple(*args):
     resultat = 0
+
     for x in args:
-        resultat += x
+        if isinstance(x, (int, float)):
+            resultat += x
+
     return resultat
 
 # Argument nommé obligatoire pour être modifier
@@ -45,10 +50,7 @@ def uneFonctionSup(num=1, x=1, *_, valide=True):
         print("valide n'est pas un booléen !")
         return -1
 
-    if valide == True:
-        return num + x
-    else:
-        return 0
+    return num + x if valide else 0
     
 def fonction3(*args, **kwargs):
     print(args)
@@ -61,8 +63,8 @@ def main():
     print(cube(3))
     print(puissance(2))
     print(puissance(2, 3))
-    print(puissance(x=3, num=2))
-    print(argsMultiple(4, 5, 10, 4))
+    print(puissance(p=3, num=2))
+    print(argsMultiple(4, 5, 10, 4, 8, 7, 5.5, 3.2, "toto"))
     print(uneFonctionSup(1, 2, valide=False))
     fonction3(1, 2, 3, 4, valide=True, num=5)
 

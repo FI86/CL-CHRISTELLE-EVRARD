@@ -18,9 +18,9 @@ def main():
     # Fermer le fichier à la fin des opérations
     f.close()
 
-    # Ouvrir le fichier en mode lecture avec with
-    # (permet de ne pas mettre la fonction close() car le with
-    # ferme automatiquement l'environnement dès qu'on sort de celui-ci)       
+    # Ouvrir le fichier en mode lecture avec with.
+    # Permet de ne pas mettre la fonction close() car le with
+    # ferme automatiquement l'environnement dès qu'on sort de celui-ci.
     with open(CHEMIN + "/textfile.txt", "r") as f:
         # Tester que le fichier est bien ouvert en mode lecture
         if f.mode == 'r': 
@@ -58,7 +58,9 @@ def main():
                 # On ne recupere pas l'\n de l'element de la liste
                 print(x[:-1])
                 # On supprime tout les \n au debut et a la fin du texte de la variable x
-                print(x.strip("\n")) # Ou print(x.strip())
+                print(x.strip("\n"))
+                # Ou
+                print(x.strip())
 
 if __name__ == "__main__":
     main()

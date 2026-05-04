@@ -17,6 +17,7 @@ class Tableau:
         # Vider le tableau
         self.tableau.clear()
  
+ 
 tab1 = Tableau()
 tab2 = Tableau()
 tab2.tableau = [1, 2, 3]

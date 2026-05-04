@@ -31,11 +31,12 @@ except Exception as e:
 print("Appuie sur Ctrl+C pour tester...")
 
 try:
-    # interception d'un SystemExit
+    # Interception d'un SystemExit
     # import sys
     # sys.exit(1)
     while True:
-        pass  # boucle infinie sortie par ctrl+c (Keyboard interrupt)
+        # Boucle infinie sortie par ctrl+c (Keyboard interrupt)
+        pass
     
 except:
     print("Exception interceptée ! (même Ctrl+C)")
@@ -96,8 +97,7 @@ try:
     resultat = traiter_valeur(-5)
 except MauvaiseValeurError as e:
     print(f"Erreur capturée : {e}")
-else:
-    print(resultat)
+
 
 # Structure complete du try
 try:

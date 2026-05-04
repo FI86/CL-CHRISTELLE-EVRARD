@@ -15,11 +15,13 @@ def main():
     ch = "213615200;BESNIER;JEAN--213565488;DUPOND;MARC--214665555;DURAND;JULIE"
     dico = {}
     etudiant = ch.split("--")
+    print(etudiant)
 
     infos_etudiant0 = etudiant[0].split(";")
     infos_etudiant1 = etudiant[1].split(";")
     infos_etudiant2 = etudiant[2].split(";")
-
+    print(infos_etudiant0, infos_etudiant1, infos_etudiant2)
+    
     dico[infos_etudiant0[0]] = infos_etudiant0[2] + " " + infos_etudiant0[1]
     dico[infos_etudiant1[0]] = infos_etudiant1[2] + " " + infos_etudiant1[1]
     dico[infos_etudiant2[0]] = infos_etudiant2[2] + " " + infos_etudiant2[1]

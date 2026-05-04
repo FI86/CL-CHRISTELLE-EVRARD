@@ -12,12 +12,12 @@ def main():
     liste3 = []
     liste4 = []
 
-    # solution 1    
+    # Solution 1    
     for element in liste:
         if len(element) < 6: liste1.append(element)
         else: liste2.append(element)
 
-    # solution 2
+    # Solution 2
     liste3 = [elem for elem in liste if len(elem) < 6]
     liste4 = [elem for elem in liste if len(elem) >= 6]
 

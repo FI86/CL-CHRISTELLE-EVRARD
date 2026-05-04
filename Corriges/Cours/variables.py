@@ -1,5 +1,9 @@
 # Fichier d'exemples pour les variables
 
+# DECLARER UNE CONSTANTE
+CONSTANTE = 15
+MA_CONSTANTE = "Ma constante"
+
 # DECLARER UNE VARIABLE ET L'INITIALISER
 # Integer
 a = 5

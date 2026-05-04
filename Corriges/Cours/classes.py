@@ -94,28 +94,33 @@ def main():
     v2 = Velo("bike", 100, 13)
     v1.rouler()
     v2.rouler()
+
     # Mauvaise pratique
     print(f"Velo 1 possède {v1.nbRoues} roues")
     print(f"Velo 2 possède {v2.nbRoues} roues")
-    # Mauvaise pratique
     v1.nbRoues = 3
     v2.nbRoues = 4
     print(f"Velo 1 possède {v1.nbRoues} roues")
     print(f"Velo 2 possède {v2.nbRoues} roues")
+
     # Bonne pratique
     print(f"Velo 1 possède {Velo.nbRoues} roues")
     print(f"Velo 2 possède {Velo.nbRoues} roues")
     Velo.nbRoues = 5
     print(f"Velo 1 possède {Velo.nbRoues} roues")
     print(f"Velo 2 possède {Velo.nbRoues} roues")
+
     # Mauvaise pratique
     v1.combien()
     v2.combien()
+
     # Bonne pratique
     Velo.combien()
+
     # Mauvaise pratique
     v1.afficher()
     v2.afficher()
+    
     # Bonne pratique
     Velo.afficher()
     print()

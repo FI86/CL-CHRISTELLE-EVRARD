@@ -1,16 +1,18 @@
 # On souhaite créer une classe Point représentant un point dans un plan
 # cartésien avec des coordonnées (x, y).
 
+# Classe Point
 class Point:
     def __init__(self, x, y):
         self.x = x
         self.y = y
 
-    def __add__(self, other):
+    # Surcharges
+    def __add__(self, other: Point):
         """Surcharge de l'opérateur +"""
         return Point(self.x + other.x, self.y + other.y)
 
-    def __sub__(self, other):
+    def __sub__(self, other: Point):
         """Surcharge de l'opérateur -"""
         return Point(self.x - other.x, self.y - other.y)
 
@@ -34,11 +36,15 @@ p4 = p1 - p2
 
 # Affichage de p1
 print("p1 :", p1)
+
 # Affichage de p2
 print("p2 :", p2)
+
 # Affichage du resultat de l'addition
 print("p1 + p2 =", p3)
+
 # Affichage du resultat de la soustraction
 print("p1 - p2 =", p4)
+
 # Reprenstation de l'affichage de l'objet Point
 print(repr(p1))

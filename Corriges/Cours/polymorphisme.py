@@ -31,5 +31,5 @@ animal.crier_comme_un_animal()
 animal = Chat()
 animal.crier()
 
-# polymorphisme ad hoc ou duck typing
+# Polymorphisme ad hoc ou duck typing
 faire_crier(animal)

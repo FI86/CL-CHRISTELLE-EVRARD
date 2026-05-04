@@ -1,9 +1,13 @@
+# Fichier d'exemple de proprietes et d'encapsulation
+
+# Class Vehicule
 class Vehicule:
     """classe véhicule"""
     def __init__(self):
         self._vitesse = 0
         self.__nbRoues = 4
 
+    # Propriétés en lecture
     @property
     def nbRoues(self):
         print("Lecture propriété nbRoues : ")
@@ -13,6 +17,7 @@ class Vehicule:
     def vitesse(self):
         return self._vitesse
 
+    # Propriétés en écriture
     @vitesse.setter
     def vitesse(self, vitesse):
         self._vitesse = vitesse
@@ -22,6 +27,7 @@ class Vehicule:
         print(f"Modification propriété nbRoues : {nbRoues}")
         self.__nbRoues = nbRoues
 
+    # Propriété en suppression
     @nbRoues.deleter
     def nbRoues(self):
         print("Réinitialisation propriété nbRoues : RAZ effectuée")
@@ -35,6 +41,7 @@ class Vehicule:
         self._vitesse -= delta_vitesse
     
 
+# Classe Voiture
 class Voiture(Vehicule):
     """classe Voiture"""
     def __init__(self, klaxon="tût tût !"):
@@ -53,21 +60,26 @@ def main():
     v.decelerer(10)
     v.klaxonner()
 
+    # Bonne pratique
     print(v.vitesse)
-    # par convention le _ indique que l'attribut est privé
+    # Par convention le _ indique que l'attribut est privé
     # mais cela ne provoque pas d'erreur d'y accéder
+    # Mauvaise pratique
     print(v._vitesse) 
 
-    # Ne provoque pas d'erreur, mais ne fonctionne pas
+    # Ne provoque pas d'erreur, mais cree comme un autre attribut d'objet
+    # au lieu d'utiliser l'attribut demande.
+    # Mauvaise pratique
     v.__nbRoues = 10
+    # Bonne pratique
     print(v.nbRoues)
     v.nbRoues = 3
     print(v.nbRoues)
     del v.nbRoues
     print(v.nbRoues)
 
+    # Mauvaise pratique
     # print(v.__nbRoues)
-    # provoque une erreur
 
 if __name__ == "__main__":
     main()

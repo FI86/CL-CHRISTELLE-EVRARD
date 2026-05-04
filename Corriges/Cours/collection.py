@@ -186,8 +186,10 @@ print(dico_sup)
 
 # Accéder à la valeur rattaché à la clé Nom (erreur si la clé n'existe pas)
 print(berti['Nom'])
+
 # Rectourne None si la clé n'existe pas
 print(berti.get("Nom"))
+
 # Retourne "toto" si la clé n'existe pas
 print(berti.get("nom", "toto"))
 
