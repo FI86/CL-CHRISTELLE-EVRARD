@@ -43,9 +43,16 @@
 
 
 # Programme Pincipal
+def main():
+    pass
+    # Creation d'objets de véhicules (Voitures et Camion)
 
-# Creation d'objets de véhicules (Voitures et Camion)
+    # Ajout de véhicules
 
-# Ajout de véhicules
+    # Affichage du parc de véhicules
 
-# Affichage du parc de véhicules
+
+# Execution du programme principal
+if __name__ == "__main__":
+    main()
+    
