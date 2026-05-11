@@ -10,7 +10,7 @@ def main():
 
     while reponse.upper() != "NON":
         valeur = input("Indiquez vitesse en Km/h : ")
-        print(f"la vitesse en m/s est : {float(valeur) * 3.6} m/s.")
+        print(f"la vitesse en m/s est : {float(valeur) / 3.6} m/s.")
         reponse = input("Voulez-vous rejouer ? ")
 
 if __name__ == "__main__":
