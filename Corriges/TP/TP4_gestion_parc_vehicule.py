@@ -86,6 +86,12 @@ class ParcVehicules:
             for vehicule in self.vehicules:
                 print(vehicule.afficher_details())
 
+    def __str__(self):
+        if not self.vehicules:
+            return "Le parc est vide."
+        
+        return "\n".join(str(v) for v in self.vehicules)
+    
 
 # Programme Pincipal
 def main():
@@ -104,6 +110,8 @@ def main():
     # Affichage du parc de véhicules
     parc.afficher_parc()
     
+    print()
+    print(parc)
     print()
     
     print(voiture1.afficher_details())
