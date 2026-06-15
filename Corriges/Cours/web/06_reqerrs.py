@@ -2,11 +2,18 @@
 import requests
 from requests.exceptions import HTTPError, Timeout 
 
+# =========================
+# CONFIGURATION
+# =========================
+UTILISE_HTTPBIN = False # True = httpbin / False = postman ou w3school
+
+
 def main():
     # Utilisation de requests pour envoyer une requete HTTP GET standard
     try:
-        url = "http://httpbin.org/status/404"
-        url = "http://httpbin.org/delay/5"
+        url = "http://httpbin.org/status/404" # NOK
+        # url = "http://httpbin.org/delay/5" if UTILISE_HTTPBIN else "https://postman-echo.com/" # OK
+
         resultat = requests.get(url, timeout=2)
         # raise_for_status lève une exception s'il y a une erreur HTTP
         # le code est retourné dans la reponse
