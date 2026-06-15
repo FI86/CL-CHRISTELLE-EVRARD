@@ -4,6 +4,11 @@
 import requests
 import json
 
+# =========================
+# CONFIGURATION
+# =========================
+UTILISE_HTTPBIN = False # True = httpbin / False = jsonplaceholder
+
 def obtenir_json(url, timeout=5) -> dict | None:
     """
     Fonction générique :
@@ -70,7 +75,7 @@ def json_place_holder():
 
 
 if __name__ == "__main__":
-    httpbin()
-    print()
-    print()
-    json_place_holder()
+    if UTILISE_HTTPBIN:
+        httpbin()
+    else:
+        json_place_holder()

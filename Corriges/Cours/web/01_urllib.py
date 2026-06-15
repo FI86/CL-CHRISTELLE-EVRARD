@@ -9,7 +9,7 @@ from http.client import HTTPResponse
 # =========================
 # CONFIGURATION
 # =========================
-UTILISE_HTTPBIN = False # True = httpbin / False = w3schools
+UTILISE_HTTPBIN = False # True = httpbin / False = w3schools ou postman
 
 def main():
     # URL utilisée dans notre exemple

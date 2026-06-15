@@ -4,12 +4,18 @@
 import requests
 import lxml.etree as etree
 
-UTILISE_HTTPBIN = False
+# =========================
+# CONFIGURATION
+# =========================
+UTILISE_HTTPBIN = False # True = httpbin / False = w3schools ou postman
 
 # Fonction principale
 def main():
     compteurSlide = 0
     compteurItem = 0
+    compteurItem2 = 0
+
+    compteurFood = 0
 
     # Utilisation de requests pour récupéree les données XML
     url = "http://httpbin.org/xml" if UTILISE_HTTPBIN else "https://www.w3schools.com/xml/simple.xml"

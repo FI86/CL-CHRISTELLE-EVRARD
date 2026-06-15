@@ -17,6 +17,7 @@ class MyContentHandler(xml.sax.ContentHandler):
 
         self.compteur_slide = 0
         self.compteur_item = 0
+
         self.compteur_food = 0
 
         self.estTitre = False
@@ -95,7 +96,7 @@ def main():
         reponse = requests.get(url, timeout=5)
         reponse.raise_for_status()
     except requests.exceptions.RequestException as e:
-        print("Erreur réseau ou site indisponible")
+        print("Erreur réseau ou site indisponible.")
         print(e)
         return
     

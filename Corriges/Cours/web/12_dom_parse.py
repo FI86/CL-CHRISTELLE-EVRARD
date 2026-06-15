@@ -21,7 +21,7 @@ def obtenir_texte(noeud: xmlmd.Element, balise: str) -> str:
 
     child = elements[0].firstChild
 
-    # Si le nœud texte est vide, on retourne une chaîne vide.
+    # Si le noeud texte est vide, on retourne une chaîne vide.
     if child is None:
         return ""
 
@@ -128,7 +128,8 @@ def main():
 
         # On recompte les balises food après modification.
         foods = domtree.getElementsByTagName("food")
-        print(f"\nAprès ajout -> Foods : {foods.length}")
+        print()
+        print(f"Après ajout -> Foods : {foods.length}")
 
 
 if __name__ == "__main__":

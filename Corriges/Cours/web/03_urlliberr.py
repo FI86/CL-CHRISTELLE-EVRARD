@@ -6,10 +6,19 @@ from urllib.error import HTTPError, URLError
 from http import HTTPStatus
 from http.client import HTTPResponse
 
+# =========================
+# CONFIGURATION
+# =========================
+UTILISE_HTTPBIN = False # True = httpbin / False = w3schools ou postman
+
+
 def main():
-    url = "http://no-such-server.org"       # Génère URLError
-    # url = "http://httpbin.org/status/404"   # Génère HTTPError
-    # url = "http://httpbin.org/html"         # Devrait fonctionner
+    # Génère URLError
+    url = "http://no-such-server.org"
+    # Génère HTTPError
+    # url = "http://httpbin.org/status/404" if UTILISE_HTTPBIN else "https://postman-echo.com/status/404"
+    # Devrait fonctionner
+    # url = "http://httpbin.org/html" if UTILISE_HTTPBIN else "https://postman-echo.com/get"
 
     # Utiliser la gestion des exceptions pour tenter l'accès à l'URL
     try:
