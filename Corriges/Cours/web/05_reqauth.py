@@ -2,10 +2,15 @@
 import requests
 from requests.auth import HTTPBasicAuth
 
+# =========================
+# CONFIGURATION
+# =========================
+UTILISE_HTTPBIN = False # True = httpbin / False = postman ou w3school
+
 def main():
     # Accès à une URL qui demande une authentication
     # Le format de l'URL demande Nom / MDP
-    url = "http://httpbin.org/basic-auth/Axel/MDP"
+    url = "http://httpbin.org/basic-auth/Axel/MDP" if UTILISE_HTTPBIN else "https://postman-echo.com/basic-auth"
 
     # Création d'un objet HTTPBasicAuth
     ba = HTTPBasicAuth('Axel', 'MDP')
