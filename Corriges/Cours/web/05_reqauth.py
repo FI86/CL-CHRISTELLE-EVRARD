@@ -13,7 +13,7 @@ def main():
     url = "http://httpbin.org/basic-auth/Axel/MDP" if UTILISE_HTTPBIN else "https://postman-echo.com/basic-auth"
 
     # Création d'un objet HTTPBasicAuth
-    ba = HTTPBasicAuth('Axel', 'MDP')
+    ba = HTTPBasicAuth('Axel', 'MDP') if UTILISE_HTTPBIN else HTTPBasicAuth("postman", "password")
 
     # Envoi de la requête avec authentification
     resultat = requests.get(url, auth = ba)
